@@ -2,42 +2,25 @@
 
 ## Lab Module 05
 
-Be sure to implement all the PIOT-GDA-* issues (requirements) listed.
+Be sure to implement all the PIOT-GDA-* issues (requirements).
 
 ### Description
 
-NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
+In this module, I integrated MQTT support into the GDA. I implemented `MqttClientConnector` and connected it to the `DeviceDataManager`, allowing the GDA to handle messages from remote devices via an MQTT broker.
 
-What does your implementation do? 
-
-How does your implementation work?
+This setup enables the GDA to receive sensor data and send actuator responses through the cloud. I tested publishing and subscribing features and confirmed that messages were processed correctly.
 
 ### Code Repository and Branch
 
-NOTE: Be sure to include the branch.
-
-URL: 
-
+URL: https://github.com/MiniX16/java-components/tree/lab-module-05
 
 ### Unit Tests Executed
 
-NOTE: The instructor will execute your unit tests. You only need to list each test case below
-(e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
-since you need to ensure you haven't introduced regressions.
-
-- 
-- 
-- 
+- ConfigUtilTest  
+- DataUtilTest  
+- MqttClientConnectorTest  
+- DeviceDataManagerTest  
 
 ### Integration Tests Executed
 
-NOTE: The instructor will execute most of your integration tests using their own environment, with
-some exceptions (such as your cloud connectivity tests). In such cases, they'll review
-your code to ensure it's correct. As for the tests you execute, you only need to list each
-test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
-
-- 
-- 
-- 
-
-EOF.
+- GatewayDeviceAppTest

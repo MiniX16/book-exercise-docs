@@ -6,37 +6,23 @@ Be sure to implement all the PIOT-CDA-* issues (requirements).
 
 ### Description
 
-NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
+In this module, I implemented support for sensor data by creating new classes: `I2cSensorAdapter`, `MockI2cSensorAdapter`, `EnvironmentalSensorAdapterTask`, and `SensorAdapterManager`. These components allow the CDA to simulate collecting temperature, humidity, and pressure data, and send it to the `DeviceDataManager`.
 
-What does your implementation do? 
-
-How does your implementation work?
+The implementation uses mock data to simulate sensor readings, managed on a schedule. All components are integrated and tested to make sure sensor data flows correctly through the system. This lays the foundation for future hardware integration.
 
 ### Code Repository and Branch
 
-NOTE: Be sure to include the branch.
-
-URL: 
+URL: https://github.com/MiniX16/python-components/tree/lab-module-03
 
 ### Unit Tests Executed
 
-NOTE: The instructor will execute your unit tests. You only need to list each test case below
-(e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
-since you need to ensure you haven't introduced regressions.
-
-- 
-- 
-- 
+- ConfigUtilTest  
+- DataUtilTest  
+- DeviceDataManagerTest  
+- SensorAdapterManagerTest  
+- EnvironmentalSensorAdapterTaskTest  
+- MockI2cSensorAdapterTest  
 
 ### Integration Tests Executed
 
-NOTE: The instructor will execute most of your integration tests using their own environment, with
-some exceptions (such as your cloud connectivity tests). In such cases, they'll review
-your code to ensure it's correct. As for the tests you execute, you only need to list each
-test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
-
-- 
-- 
-- 
-
-EOF.
+- ConstrainedDeviceAppTest

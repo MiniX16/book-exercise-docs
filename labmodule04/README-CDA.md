@@ -6,38 +6,25 @@ Be sure to implement all the PIOT-CDA-* issues (requirements).
 
 ### Description
 
-NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
+In this module, I added actuator support to the CDA. I created `LedActivatorTask`, `HvacActuatorSimTask`, `HumidifierActuatorSimTask`, and `GenericActuatorSimTask` to simulate devices that respond to commands like turning on/off or changing levels (e.g., temperature or humidity).
 
-What does your implementation do? 
-
-How does your implementation work?
+These actuator classes are managed by `ActuatorAdapterManager`, which connects them to the `DeviceDataManager`. I also added a new actuator data type for testing. The implementation simulates how the CDA would control real hardware in future deployments.
 
 ### Code Repository and Branch
 
-NOTE: Be sure to include the branch.
-
-URL: 
-
+URL: https://github.com/MiniX16/python-components/tree/lab-module-04
 
 ### Unit Tests Executed
 
-NOTE: The instructor will execute your unit tests. You only need to list each test case below
-(e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
-since you need to ensure you haven't introduced regressions.
-
-- 
-- 
-- 
+- ConfigUtilTest  
+- DataUtilTest  
+- DeviceDataManagerTest  
+- ActuatorAdapterManagerTest  
+- GenericActuatorSimTaskTest  
+- HvacActuatorSimTaskTest  
+- HumidifierActuatorSimTaskTest  
+- LedActivatorTaskTest  
 
 ### Integration Tests Executed
 
-NOTE: The instructor will execute most of your integration tests using their own environment, with
-some exceptions (such as your cloud connectivity tests). In such cases, they'll review
-your code to ensure it's correct. As for the tests you execute, you only need to list each
-test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
-
-- 
-- 
-- 
-
-EOF.
+- ConstrainedDeviceAppTest

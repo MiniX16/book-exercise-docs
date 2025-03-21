@@ -6,38 +6,21 @@ Be sure to implement all the PIOT-CDA-* issues (requirements).
 
 ### Description
 
-NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
+In this module, I added cloud connectivity to the CDA by integrating MQTT support. I created the `MqttClientConnector` class and connected it to the `DeviceDataManager`, enabling the app to publish and subscribe to messages from an MQTT broker.
 
-What does your implementation do? 
-
-How does your implementation work?
+I also updated the configuration to store MQTT settings and verified that the CDA could send actuator commands and receive responses over the network. This allows remote control and monitoring, which is a key step toward a fully connected IoT solution.
 
 ### Code Repository and Branch
 
-NOTE: Be sure to include the branch.
-
-URL: 
-
+URL: https://github.com/MiniX16/python-components/tree/lab-module-05
 
 ### Unit Tests Executed
 
-NOTE: The instructor will execute your unit tests. You only need to list each test case below
-(e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
-since you need to ensure you haven't introduced regressions.
-
-- 
-- 
-- 
+- ConfigUtilTest  
+- DataUtilTest  
+- DeviceDataManagerTest  
+- MqttClientConnectorTest  
 
 ### Integration Tests Executed
 
-NOTE: The instructor will execute most of your integration tests using their own environment, with
-some exceptions (such as your cloud connectivity tests). In such cases, they'll review
-your code to ensure it's correct. As for the tests you execute, you only need to list each
-test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
-
-- 
-- 
-- 
-
-EOF.
+- ConstrainedDeviceAppTest

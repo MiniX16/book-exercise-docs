@@ -2,42 +2,26 @@
 
 ## Lab Module 02
 
-Be sure to implement all the PIOT-GDA-* issues.
+Be sure to implement all the PIOT-GDA-* issues (requirements).
 
 ### Description
 
-NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
+In this module, I created and connected a new `SystemPerformanceManager` class to the main GDA app. This manager is responsible for collecting system performance metrics like CPU and memory usage through scheduled tasks. I added the necessary classes and interfaces to support this, following the design from the CDA implementation.
 
-What does your implementation do? 
-
-How does your implementation work?
+After integrating the manager into the app, I verified that performance data was being collected and logged correctly. This prepares the GDA for future modules where it will forward this data to other components or services.
 
 ### Code Repository and Branch
 
-NOTE: Be sure to include the branch.
-
-URL: 
-
+URL: https://github.com/MiniX16/java-components/tree/lab-module-02
 
 ### Unit Tests Executed
 
-NOTE: The instructor will execute your unit tests. You only need to list each test case below
-(e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
-since you need to ensure you haven't introduced regressions.
-
-- 
-- 
-- 
+- ConfigUtilTest  
+- DataUtilTest  
+- SystemPerformanceManagerTest  
+- SystemCpuUtilTaskTest  
+- SystemMemUtilTaskTest  
 
 ### Integration Tests Executed
 
-NOTE: The instructor will execute most of your integration tests using their own environment, with
-some exceptions (such as your cloud connectivity tests). In such cases, they'll review
-your code to ensure it's correct. As for the tests you execute, you only need to list each
-test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
-
-- 
-- 
-- 
-
-EOF.
+- GatewayDeviceAppTest
